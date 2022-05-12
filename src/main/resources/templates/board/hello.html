@@ -6,44 +6,52 @@
     <link rel="stylesheet" href="/css/board/hello.css">
 </head>
 <body>
-    <div class="wrap">
-        <div class="header">
-            <div class="hd-top">
-                <div class="hd-top-user-bar">
-                    <ul class="hd-ul">
-                        <li class="hd-li">로그인</li>
-                        <li class="hd-li">회원가입</li>
-                        <li class="hd-li">장바구니</li>
-                        <li class="hd-li">마이페이지</li>
-                        <li class="hd-li">고객센터</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="hd-center">
-                <div class="header-logo">
-                    <img class="cat-img"
-                         src="https://us.123rf.com/450wm/alekseyvanin/alekseyvanin1710/alekseyvanin171000219/87274740-%EA%B3%A0%EC%96%91%EC%9D%B4-%EC%95%84%EC%9D%B4%EC%BD%98.jpg"
-                         alt="">
-                    <span>냥냥펀치</span>
-                </div>
-                <div class="search-box">
-                    <input type="search" placeholder="검색어를 입력해주세요.">
-                </div>
-            </div>
-            <div class="hd-menu-bar">
+<div class="wrap">
+    <div class="header">
+        <div class="hd-top">
+            <div class="hd-top-user-bar">
                 <ul class="hd-ul">
-                    <li class="hd-li">사료</li>
-                    <li class="hd-li">간식/영양제</li>
-                    <li class="hd-li">모래용품</li>
-                    <li class="hd-li">장난감/스크래쳐</li>
-                    <li class="hd-li">캣타워</li>
+                    <li class="hd-li">로그인</li>
+                    <li class="hd-li">회원가입</li>
+                    <li class="hd-li">장바구니</li>
+                    <li class="hd-li">마이페이지</li>
+                    <li class="hd-li">고객센터</li>
                 </ul>
             </div>
-
-
-
+        </div>
+        <div class="hd-center">
+            <div class="header-logo">
+                <img class="cat-img"
+                     src="https://us.123rf.com/450wm/alekseyvanin/alekseyvanin1710/alekseyvanin171000219/87274740-%EA%B3%A0%EC%96%91%EC%9D%B4-%EC%95%84%EC%9D%B4%EC%BD%98.jpg"
+                     alt="">
+                <span>냥냥펀치</span>
+            </div>
+            <div class="search-box">
+                <input type="search" placeholder="검색어를 입력해주세요.">
+            </div>
+        </div>
+        <div class="hd-menu-bar">
+            <ul class="hd-ul">
+                <li class="hd-li">사료</li>
+                <li class="hd-li">간식/영양제</li>
+                <li class="hd-li">모래용품</li>
+                <li class="hd-li">장난감/스크래쳐</li>
+                <li class="hd-li">캣타워</li>
+            </ul>
         </div>
     </div>
+
+    <div class="container">
+        <!-- 본문 시작 -->
+        <div class="main-visual">
+            <p th:each="entry : ${list}">
+                <span th:text="${entry['NICK']}"></span>
+                <span th:text="${entry['TITLE']}"></span>
+            </p>
+        </div>
+
+    </div>
+</div>
 
 
 </body>
