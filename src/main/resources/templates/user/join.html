@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>회원가입</title>
+    <link rel="stylesheet" th:href="@{/css/user/join.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script defer th:src="@{/js/user/join.js}"></script>
+
 </head>
 <body>
+<div>
+    <h2>회원가입</h2>
+    <form method="post" onsubmit="return false;" id="join-form">
+        <input type="text" placeholder="id" name="id">
+        <input type="text" placeholder="pw" name="pw">
+        <input type="text" placeholder="nick" name="nick">
+        <input type="button" id="join-submit" onclick="join();" value="회원가입" >
+    </form>
+
+</div>
 
 </body>
 </html>

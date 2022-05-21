@@ -14,10 +14,10 @@ public class BoardController {
 
     private final BoardService boardService;
 
-    @GetMapping("/hello")
+    @GetMapping("/main")
     public String Hello(Model model) {
         model.addAttribute("list", boardService.boardList());
-        return "/board/hello";
+        return "/board/main";
     }
 
 
