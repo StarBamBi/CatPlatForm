@@ -21,10 +21,8 @@ function join() {
         dataType:"json",
         contentType: "application/json",
         success : function(res) {
-            if(res.success()) {
-                alert('회원가입성공!');
-            }
+            location.href = '/board/main';
         }
     });
-    location.href = '/board/main';
+
 }
