@@ -15,8 +15,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/join")
-    public void Join() {
+    @RequestMapping(value = "/join", method = RequestMethod.GET)
+    public String Join() {
+        return "user/join";
     }
 
     @PostMapping("/join")
